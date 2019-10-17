@@ -75,3 +75,30 @@ body {
   color: red;
   text-align: center;
 }
+
+.UpdateMovie {
+  text-align: center;
+}
+
+.UpdateMovie form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 360px;
+  height: 355px;
+  margin: auto;
+}
+
+.UpdateMovie input {
+  width: 354px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.UpdateMovie button {
+  width: 120px;
+  height: 45px;
+  margin: auto;
+  border-radius: 5px;
+}

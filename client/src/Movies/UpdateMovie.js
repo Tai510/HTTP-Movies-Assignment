@@ -5,15 +5,15 @@ const UpdateForm = props => {
     const initialItem = {
         id: props.match.params.id,
         title: "",
-        director: "",
         metascore: "",
+        director: "",
     };
 
     const [stars, setStars] =useState([]);
     const [update, setUpdate] = useState(initialItem);
     console.log('update',update)
 
-  const changeHandler = e => {
+  const handleChange = e => {
       e.preventDefault();
       setUpdate({...update, [e.target.name]: e.target.value })
   }
@@ -23,11 +23,11 @@ const UpdateForm = props => {
     setStars({...stars, [e.target.name]: [e.target.value] })
 }
 
-const data={
+const data = {
     ...update,
     ...stars
 }
-console.log('data', data)
+
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -41,36 +41,40 @@ console.log('data', data)
   }
 
   return (
-    <div>
+    <div className='UpdateMovie'>
       <h2>Update Item</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="title"
-          onChange={changeHandler}
+          onChange={handleChange}
           value={update.title}
+          placeholder='Title'
         />
         <input
           type="number"
           name="metascore"
-          onChange={changeHandler}
+          onChange={handleChange}
           value={update.metascore}
+          placeholder='Metascore'
         />
         <input
           type='text'
           name="director"
-          onChange={changeHandler}
+          onChange={handleChange}
           value={update.director}
+          placeholder='Director'
         />
         <input
           type="array"
           name="stars"
           onChange={changeHandlerStars}
           value={update.stars}
+          placeholder='Stars'
         />
-        <button className="form-button">Update Movie</button>
+        <button>Update Movie</button>
       </form>
-    </div>
+    </div> /* UpdateMovie end */
   );
 }
 
