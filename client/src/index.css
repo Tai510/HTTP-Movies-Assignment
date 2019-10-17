@@ -66,6 +66,30 @@ body {
   color: white;
 }
 
+.update-button {
+  height: 35px;
+  width: 70px;
+  cursor: pointer;
+  margin-left: 460px;
+  border-radius: 5px;
+  font-size: 15px;
+  background: #1FDEAD;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.delete-button {
+  height: 35px;
+  width: 70px;
+  cursor: pointer;
+  margin-left: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  background: #DE431F;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
@@ -74,4 +98,31 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.UpdateMovie {
+  text-align: center;
+}
+
+.UpdateMovie form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 360px;
+  height: 355px;
+  margin: auto;
+}
+
+.UpdateMovie input {
+  width: 354px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.UpdateMovie button {
+  width: 120px;
+  height: 45px;
+  margin: auto;
+  border-radius: 5px;
 }
